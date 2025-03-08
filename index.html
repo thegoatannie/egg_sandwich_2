@@ -16,17 +16,37 @@
     }
 
     body {
-      margin: 0;
       padding: 0;
       overflow-x: hidden;
-      background-image: url(yellow_wallpaper.jpg);
+      background-image: url(book.png);
+      background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat;
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
 
-    .title-container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
+    .egg_1_img {
+      background-image: url(egg_1.jpg);
+      width: 30vw;
+      height: 30vh;
+      background-size: cover;
+      background-position: center;
+      position: absolute;
+      right: 50%;
+      top: 50%;
+      transform: translateY(-50%);
+      border-radius: 20px;
+    }
+
+    .recipe {
+      font-family: "Coiny";
+      font-size: 7vw;
+      color: hsl(39, 100%, 50%);
+      text-shadow: 5px 5px 0px rgba(0, 136, 21, 1);
       text-align: center;
     }
 
@@ -41,28 +61,28 @@
 
     .egg_img_title {
       background-image: url(egg_cover_img-fotor-bg-remover-20250307214756.png);
-      height: 30vh; 
+      height: 30vh;
       width: 100%;
-      background-size: cover; 
-      background-position: center bottom; 
-      margin-top: -10vh; 
+      background-size: cover;
+      background-position: center bottom;
+      margin-top: -10vh;
       display: block;
-      min-height: 60vh; 
+      min-height: 60vh;
     }
-    
+
     .note {
-      background-image: url("—Pngtree—simple cute cartoon animal bear_4007728.png"); 
-      height: 70vh; 
+      background-image: url("—Pngtree—simple cute cartoon animal bear_4007728.png");
+      height: 70vh;
       width: 40vw;
       margin-top: 10vh;
-      background-size: cover; 
-      background-position: center; 
+      background-size: cover;
+      background-position: center;
       display: flex;
       flex-direction: column;
-      justify-content: center; 
-      align-items: center; 
-      color: brown; 
-      text-align: center; 
+      justify-content: center;
+      align-items: center;
+      color: brown;
+      text-align: center;
     }
 
     .note h2 {
@@ -94,25 +114,6 @@
       height: 30px;
     }
 
-    .main-menu {
-      border: 1px solid black;
-      height: 50px;
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
-      font-size: 2em;
-    }
-
-    .highlights {
-      text-align: center;
-      margin: 0 auto;
-      padding: 10vh;
-      font-size: 3.5em;
-      width: 50vw;
-      font-family: "Alta", sans-serif;
-      letter-spacing: 0.15em;
-    }
-
     main {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -122,11 +123,60 @@
       margin: auto;
       max-height: 60vh;
     }
+
+    .recipe-container {
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding-right: 12vw;
+    }
+
+    .recipe-box {
+      background-color: hsl(340, 70%, 95%);
+      padding: 5px;
+      width: 80%;
+      max-width: 50vw; /* Constrains the width to 50% of the viewport */
+      border-radius: 15px;
+      box-sizing: border-box; /* Prevents box from exceeding max-width */
+    }
+
+    /* Make sure headings scale well */
+    .recipe-box h2 {
+      font-size: 2vw;
+    }
+
+    .recipe-box p {
+      font-size: 1.5vw;
+    }
   </style>
 
   <body>
     <main>
-      
+      <div class="egg_1_img"></div>
+      <div class="recipe-container">
+        <div class="recipe">
+          Recipe
+        </div>
+        <div class="recipe-box">
+          <h2>Ingredients</h2>
+          <p>6 large eggs <br>
+             1/4 cup Japanese mayonnaise <br>
+             1/4 to 1/2 teaspoon salt, adjust to taste <br>
+             1/4 teaspoon black pepper, adjust to taste <br>
+             pinch of sugar <br>
+             1 teaspoon yellow mustard <br>
+             2 to 3 tablespoons heavy cream or milk</p>
+          <h2>For Assembly</h2>
+          <p>Japanese milk bread, or any thick slice soft white bread <br>
+             thinly sliced cucumber <br>
+             salted butter, room temperature</p>
+        </div>
+      </div>
     </main>
   </body>
 </html>
