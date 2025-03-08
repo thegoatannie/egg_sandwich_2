@@ -2,26 +2,98 @@
 <html lang="en-US">
   <head>
     <meta charset="utf-8">
-    <title>Instagram Redesign</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Coiny&display=swap" rel="stylesheet">
+    <title>Cookbook</title>
   </head>
-  
+
   <style>
-    @font-face {
-      font-family: "Lucidity Expand";
-      src: url(lucidity-expand.ttf);
+    .coiny-regular {
+      font-family: "Coiny", system-ui;
+      font-weight: 400;
+      font-style: normal;
     }
-    
-    @font-face {
-      font-family: "Alta";
-      src: url(alta-regular.ttf);
-    }
-      
+
     body {
       margin: 0;
       padding: 0;
       overflow-x: hidden;
+      background-image: url(yellow_wallpaper.jpg);
+    }
+
+    .title-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .title {
+      font-family: "Coiny";
+      font-size: 10vh;
+      color: hsl(39, 100%, 50%);
+      text-shadow: 5px 5px 0px rgba(0, 136, 21, 1);
+      text-align: left;
+      margin-left: 5vw;
+    }
+
+    .egg_img_title {
+      background-image: url(egg_cover_img-fotor-bg-remover-20250307214756.png);
+      height: 30vh; 
+      width: 100%;
+      background-size: cover; 
+      background-position: center bottom; 
+      margin-top: -10vh; 
+      display: block;
+      min-height: 60vh; 
     }
     
+    .note {
+      background-image: url("—Pngtree—simple cute cartoon animal bear_4007728.png"); 
+      height: 70vh; 
+      width: 40vw;
+      margin-top: 10vh;
+      background-size: cover; 
+      background-position: center; 
+      display: flex;
+      flex-direction: column;
+      justify-content: center; 
+      align-items: center; 
+      color: brown; 
+      text-align: center; 
+    }
+
+    .note h2 {
+      margin-top: 5vh;
+      font-size: 2em;
+      margin-bottom: 10px;
+      font-family: "Coiny";
+    }
+
+    .button {
+      background-color: rgba(0, 136, 21, 1);
+      padding: 5px 20px;
+      color: white;
+      border: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+    }
+
+    .button:hover {
+      background-color: darkgreen;
+    }
+
+    .button img {
+      width: 30px;
+      height: 30px;
+    }
+
     .main-menu {
       border: 1px solid black;
       height: 50px;
@@ -31,48 +103,16 @@
       font-size: 2em;
     }
 
-    .text_header {
-      height: 50px;
-      font-size: 3em;
-      display: flex;
-      justify-content: space-between; 
-      width: 90vw;
-      margin: 0 auto;
-      padding-bottom: 10vh;
-    }
-    
-    .right {
-      padding-top: 5vh;
-      font-size: 0.3em;
-    }
-    
-    .bed {
-      font-size: 0.8em;
-      width: 30vw;
-      text-align: center;
-      margin: 0 auto;
-      padding: 5vw;
-    }
-    
-   .image_header {
-      width: 90vw;
-      height: 300px;
-      background-size: cover;
-      background-position: center;
-      border-radius: 20px;
-      margin: 0 auto; 
-    }
-    
     .highlights {
       text-align: center;
-      margin: 0 auto; 
+      margin: 0 auto;
       padding: 10vh;
       font-size: 3.5em;
       width: 50vw;
       font-family: "Alta", sans-serif;
       letter-spacing: 0.15em;
     }
-    
+
     main {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -82,238 +122,11 @@
       margin: auto;
       max-height: 60vh;
     }
-    
-    .grid-container-1 {
-      display: grid;
-      grid-auto-rows: 40vh 60vh;
-      gap: 10px;
-      justify-content: center;
-      width: 22vw;
-      margin: auto;
-    }
-    
-    .grid-container-1 img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: top;
-      display: block;
-    }
-    
-    .grid-container-2 {
-      display: grid;
-      grid-auto-rows: 70vh 5vh 23vh;
-      gap: 10px;
-      justify-content: center;
-      width: 22vw;
-      margin: auto;
-    }
-    
-    .grid-container-2 img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: top;
-      display: block;
-    }
-    
-    .grid-container-3 {
-      display: grid;
-      grid-auto-rows: 70vh 30vh;
-      gap: 10px;
-      justify-content: center;
-      width: 22vw;
-      margin: auto;
-    }
-    
-    .grid-container-3 img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: top;
-      display: block;
-    }
-    
-    .grid-container-4 {
-      display: grid;
-      grid-auto-rows: 28vh 10vh 60vh;
-      gap: 10px;
-      justify-content: center;
-      width: 22vw;
-      margin: auto;
-    }
-    
-    .grid-container-4 img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: top;
-      display: block;
-    }
-    
-    .photo-main {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-    }
-    
-    .photo-main_horizontal {
-      display: grid;
-      grid-template-columns: 1fr;
-    }
-    
-    .photos {
-      height: 80vh;
-      width: 100%;
-      background-size: cover;
-      background-position: center;
-      position: relative;
-    }
-    
-    .photos_horizontal {
-      width: 100vw;
-      height: 60vh;
-      background-size: cover;
-      background-position: center;
-      position: relative;
-      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
-    }
-    
-    .text-left {
-      position: absolute;
-      color: #4889eb;
-      padding: 2vw;
-      font-size: 2vw;
-      font-family: "Lucidity Expand", sans-serif;
-      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
-    }
-    
-    .text-right {
-      position: absolute;
-      top: 40%;
-      color: #4889eb;
-      padding: 2vw;
-      font-size: 2vw;
-      font-family: "Lucidity Expand", sans-serif;
-      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
-    }
-    
-    .bottom-menu {
-      display: flex;
-      margin-top: -2vh;
-      justify-content: space-between;
-      align-items: center; 
-      color: #4889eb;
-      font-size: 1.2em;
-    }
-      
-  
   </style>
-  
+
   <body>
-    <div class="text_header">
-      <div class="left">
-        annie fang <br>
-        <p style="font-size:0.3em">
-          @uchicago <br>
-          vsco.co/thegoatannie
-        </p>
-      </div>
-      <div class="right">
-        fanga@uchicago.edu <br>
-        858-123-4567
-      </div>
-    </div>
-
-    <div class="bed">
-      classic 20 year old student who enjoys long walks by her bed, and enjoys working on her quads to have an easier time walking to bed.
-    </div>  
-
-    <div class="image_header" style="background-image: url('IMG_5619_Original (1).jpg')"></div>
-
-    <div class="highlights">
-      FEATURED HIGHLIGHTS FOOD
-    </div>
-    
-  <main>
-    <div class="grid-container-1">
-      <img src="IMG_2424.jpg">
-      <img src="IMG_2419.jpg">
-    </div>
-    <div class="grid-container-2">
-      <img src="IMG_2420.jpg">
-      <img src="IMG_2416.jpg">
-      <img src="IMG_2425.jpg">
-    </div>
-    <div class="grid-container-3">
-      <img src="IMG_2422.jpg">
-      <img src="IMG_2423.jpg">
-    </div>
-    <div class="grid-container-4">
-      <img src="IMG_2418.jpg">
-      <img src="IMG_2415.jpg">
-      <img src="IMG_2417.jpg">
-    </div>
-  </main>
-  
-  <div class="highlights" style="margin-top: 40vh;">
-      PHOTOGRAPHY
-  </div>
-    
-  <div class="photo-main">
-    <div class="photos" style="background-image: url('IMG_2426.jpg')">
-      <div class="text-left">OCTOBER 8, <br>2025</div>
-    </div>
-    <div class="photos" style="background-image: url('IMG_2427 2.jpg')">
-      <div class="text-right">LIKES: HIDDEN <br>SHARES: 09</div>
-    </div>
-    <div class="photos" style="background-image: url('IMG_2434.jpg')">
-      <div class="text-left">JULY 16, <br>2024</div>
-    </div>
-    <div class="photos" style="background-image: url('IMG_2435.jpg')">
-      <div class="text-right">LIKES: HIDDEN <br>SHARES: 01</div>
-    </div>
-  </div>
-    
-  <div class="photo-main_horizontal">
-    <div class="photos_horizontal" style="background-image: url('IMG_2433.jpg')">
-      <div class="text-right">AUGUST 30<br>2024</div>
-    </div>
-    <div class="photos_horizontal" style="background-image: url('IMG_2432.jpg')">
-      <div class="text-right">AUGUST 30<br>2024</div>
-    </div>
-  </div>
-    
-  <div class="photo-main">
-    <div class="photos" style="background-image: url('IMG_2428.jpg')">
-      <div class="text-left">NOVEMBER 22,<br>2024</div>
-    </div>
-    <div class="photos" style="background-image: url('IMG_2429.jpg')">
-      <div class="text-right">LIKES: HIDDEN <br>SHARES: 09</div>
-    </div>
-    <div class="photos" style="background-image: url('IMG_2430.jpg')">
-      <div class="text-left">NOVEMBER 2,<br>2024</div>
-    </div>
-    <div class="photos" style="background-image: url('IMG_2441.jpg')">
-      <div class="text-right">LIKES: HIDDEN <br>SHARES: 03</div>
-    </div>
-  </div>
-  
-  <div class="photo-main_horizontal">
-    <div class="photos_horizontal" style="background-image: url('IMG_2439.jpg')">
-      <div class="text-right">JANUARY 21,<br>2024</div>
-    </div>
-  </div>
-  
-  <div class="bottom-menu">
-    <p>fanga@uchicago.edu</p> 
-    <p>comments</p> 
-    <p>notifications</p> 
-  </div>
-  
-  <div class="highlights" style="margin-top: -5vh;">
-      SHARE PROFILE
-  </div>  
-    
-    
+    <main>
+      
+    </main>
   </body>
 </html>
